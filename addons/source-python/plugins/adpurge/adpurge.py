@@ -24,8 +24,6 @@ DOMAIN_AD_REGEX = re.compile(r"\w+\.({tlds})".format(tlds='|'.join(tlds)))
 IP_AD_REGEX = re.compile(r"\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}")
 TEXTMSG_INDEX = get_message_index('TextMsg')
 SAYTEXT2_INDEX = get_message_index('SayText2')
-with open('regex.txt', 'w') as f:
-    f.write(r"\w+\.({tlds})".format(tlds='|'.join(tlds)))
 
 if PLATFORM == "windows":
     SEND_USER_MESSAGE_INDEX = 45
