@@ -1,14 +1,13 @@
-from cvars.public import PublicConVar
-from plugins.info import PluginInfo
+"""Provides/stores information about the plugin."""
+
+# =============================================================================
+# >> IMPORTS
+# =============================================================================
+# Source.Python
+from plugins.manager import plugin_manager
 
 
-info = PluginInfo()
-info.name = "AdPurge"
-info.basename = 'adpurge'
-info.author = 'Kirill "iPlayer" Mysnik'
-info.version = '1.0'
-info.variable = '{}_version'.format(info.basename)
-info.convar = PublicConVar(
-    info.variable, info.version, "{} version".format(info.name))
-
-info.url = "http://sourcepython.com/"
+# =============================================================================
+# >> PLUGIN INFO
+# =============================================================================
+info = plugin_manager.get_plugin_info(__name__)
